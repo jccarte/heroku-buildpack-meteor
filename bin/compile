@@ -134,6 +134,9 @@ if [ -z "$SERVER_ONLY_FLAG" ]; then
   echo "-----> Attempting to remove android platform."
   HOME=$METEOR_DIR $METEOR remove-platform android || true
   echo "-----> Moving on."
+  echo "-----> Attempting to remove ios platform."
+  HOME=$METEOR_DIR $METEOR remove-platform ios || true
+  echo "-----> Moving on."
 fi
 
 # Identify the npm/node to use. While we could use `meteor node` and `meteor
